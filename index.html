@@ -66,29 +66,32 @@
             text-align: center;
         }
 
-.announcement-bar {
-    background: rgba(255, 204, 102, 0.1); /* Subtle gold tint */
-    border: 1px dashed #8e6d3d;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px 0;
-    font-size: 0.8em;
-    color: #ffcc66;
-    font-style: italic;
-    line-height: 1.4;
-}
+        .announcement-bar {
+            background: rgba(255, 204, 102, 0.1);
+            border: 1px dashed #8e6d3d;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 0.8em;
+            color: #ffcc66;
+            font-style: italic;
+            line-height: 1.4;
+        }
 
         .menu-item { display: flex; justify-content: space-between; font-weight: bold; margin-top: 15px; font-size: 0.95em; }
         .item-name { color: #fff; text-align: left; }
         .price { color: #ffcc66; padding-left: 10px; }
         .description { font-size: 0.75em; color: #a08870; margin-bottom: 10px; font-style: italic; text-align: left; line-height: 1.3; }
         
-        /* Grid for Halves (Add ons & Drinks) */
         .grid-container { display: flex; gap: 15px; text-align: left; }
         .grid-section { flex: 1; }
-        .grid-section h2 { font-size: 1em; } /* Slightly smaller headers for the halves */
+        .grid-section h2 { font-size: 1em; }
         
-        .star::before { content: "★ "; color: #ffcc66; }
+        .star::after { 
+            content: "★ "; 
+            color: #ffcc66; 
+            margin-left: 4px;
+        }
     </style>
 </head>
 <body>
@@ -101,9 +104,11 @@
     <h2>Chole Kulcha Specials</h2>
     <div class="menu-item"><span class="star item-name">Classic Chole Kulcha</span> <span class="price">₹90</span></div>
     <div class="description">Golden kulcha served with spicy Punjabi chole.</div>
+    <div class="description">2 kulchas + Chole + Salad.</div>
     
     <div class="menu-item"><span class="item-name">Butter Chole Kulcha</span> <span class="price">₹100</span></div>
     <div class="description">Soft kulcha loaded with rich butter & chole.</div>
+    <div class="description">2 Butter kulchas + Chole + Salad.</div>
 
     <h2>Stuffed Kulcha</h2>
     <div class="menu-item"><span class="item-name">Aloo Stuffed</span> <span class="price">₹90</span></div>
@@ -111,8 +116,11 @@
     
     <div class="menu-item"><span class="star item-name">Paneer Stuffed</span> <span class="price">₹110</span></div>
     <div class="description">Soft kulcha with fresh paneer filling.</div>
+
+    <div class="menu-item"><span class="star item-name">Chole Stuffed</span> <span class="price">₹100</span></div>
+    <div class="description">Golden-crisp kulcha heart-stuffed with spicy Punjabi chole.</div>
     
-    <div class="menu-item"><span class="item-name">Cheese Melt Chole Kulcha</span> <span class="price">₹100</span></div>
+    <div class="menu-item"><span class="item-name">Cheese Melt Kulcha</span> <span class="price">₹70</span></div>
     <div class="description">Kulcha filled with flavourful stuffing.</div>
 
     <h2>Rice Specials</h2>
@@ -124,19 +132,18 @@
 
     <h2>Maggi Mania</h2>
     <div class="menu-item"><span class="item-name">Masala Maggi</span> <span class="price">₹60</span></div>
-    
     <div class="menu-item"><span class="item-name">Vegetable Maggi</span> <span class="price">₹70</span></div>
-
     <div class="menu-item"><span class="star item-name">Peri - Peri Maggi</span> <span class="price">₹60</span></div>
 
     <div class="grid-container">
         <div class="grid-section">
             <h2>Add Ons</h2>
+            <div class="menu-item"><span>Extra Kulcha</span> <span class="price">₹30</span></div>
+            <div class="menu-item"><span>Masala Chole</span> <span class="price">₹50</span></div>
             <div class="menu-item"><span>Extra Salad</span> <span class="price">₹20</span></div>
             <div class="menu-item"><span>Extra Cheese</span> <span class="price">₹30</span></div>
             <div class="menu-item"><span>Boondi Raita</span> <span class="price">₹30</span></div>
-            <div class="menu-item"><span>Veg Raita</span> <span class="price">₹40</span></div>	
-
+            <div class="menu-item"><span>Veg Raita</span> <span class="price">₹40</span></div>    
         </div>
         <div class="grid-section">
             <h2>Drinks</h2>
@@ -147,7 +154,7 @@
         </div>
     </div>
 
-<div class="announcement-bar"><strong>Note:</strong>Add-Ons are available on both Kulchas and Maggi.</div>
+    <div class="announcement-bar"><strong>Note:</strong> *Add-Ons are available on both Kulchas and Maggi.</div>
 
     <div class="img-wrapper-bottom">
         <img src="https://i.postimg.cc/8PqrMjJs/Foood.png" class="footer-img-large" alt="Food Photo">
